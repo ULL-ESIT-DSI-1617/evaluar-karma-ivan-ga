@@ -19,13 +19,12 @@ module.exports = function(config) {
       'assets/js/main.js',
       'assets/js/medida.js',
       'assets/js/temperature.js',
-      'vendor/chai.js',
-      'vendor/mocha.css',
-      'vendor/mocha.js',
-      'vendor/sinon.js',
-      'vendor/blanket.js',
-      'vendor/test.html',
-      'vendor/test.js'
+      'test/chai.js',
+      'test/mocha.css',
+      'test/mocha.js',
+      'test/blanket.js',
+      'test/test.html',
+      'test/test.js'
     ],
 
 
@@ -34,20 +33,11 @@ module.exports = function(config) {
     ],
 
 
-    // preprocess matching files before serving them to the browser
-    // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    preprocessors: {
-      'test.html': ['html2js']
-    },
-    
     plugins: [
       'karma-mocha',
       'karma-chai',
-      'karma-chrome-launcher',
       'karma-firefox-launcher',
-      'karma-html2js-preprocessor',
-      'karma-phantomjs-launcher',
-      'karma-safari-launcher'
+      'karma-phantomjs-launcher'
       ],
 
 
@@ -76,19 +66,19 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    
-    
- 
-    
+
+
+
+
      browsers: ['PhantomJS','Firefox'],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
     singleRun: false,
-    
+
     // Concurrency level
     // how many browser should be started simultaneous
     concurrency: Infinity
   });
- 
+
 };
